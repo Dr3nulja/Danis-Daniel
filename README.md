@@ -1,6 +1,6 @@
 Project is done by // Danis Nizamov, Daniel Stikkel
 
-Project name // Scrabble game Estonian version
+Project name // Word maker game Estonian version
 
 Project Desctiption // none, will be update
 
