@@ -26,15 +26,29 @@ label.pack()
 entry = tk.Entry(width=17, font=("Arial", 24))
 entry.pack(padx=6, pady=6)
 
+
 def myClick():
-    entry = tk.Entry(width=17, font=("Arial", 24))
-    entry.pack(padx=6, pady=6)
-    button = tk.Button(text="Next", command=myClick, font=("Arial", 12))
-    button.pack(pady=10)
+    word = entry.get()
+    listbox.insert(0, word)
 
 
-button = tk.Button(text="Next", command=myClick, font=("Arial", 12))
-button.pack(pady=10)
+listbox = tk.Listbox(height = 15,
+                  width = 33,
+                  bg = "grey",
+                  activestyle = 'dotbox',
+                  font = "Arial",
+                  fg = "white")
+scrollbar = tk.Scrollbar()
+scrollbar.pack(side = "right", fill= "both")
+for values in range(0):
+    listbox.insert("end", values)
+listbox.config(yscrollcommand=scrollbar.set)
+scrollbar.config(command=listbox.yview)
+listbox.pack() 
+
+
+button = tk.Button(text="Add Word to Listbox", command=myClick, font=("Arial", 12))
+button.pack(anchor="n")
 
 
 button = tk.Button(text="Save", font=("Arial", 15))
