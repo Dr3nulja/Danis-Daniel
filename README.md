@@ -21,4 +21,4 @@ How to use project //
 Word Programm preview: ![wordmakergame](https://user-images.githubusercontent.com/131642172/233935102-5848e57a-b812-46b8-8bac-b8547aa5e9da.png)
 
 
-Programm preview: ![image](https://user-images.githubusercontent.com/131642172/236789167-8f90c6f3-08b9-40c9-a0b2-e11f6519cb2a.png)
+Programm preview: ![image](https://user-images.githubusercontent.com/131642172/236808697-bab81834-d976-43e2-9819-e66caa38fa2c.png)
