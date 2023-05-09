@@ -5,7 +5,9 @@ Project name:
 Word maker game Estonian version
 
 Project Desctiption:
-none, will be update
+Our project is designed to study
+Estonian words through a simple game. The "Word Maker Game" project has a simple and intuitive interface.
+The game itself is the input of the correct word from the letters displayed on the screen.
 
 How to install and run project:
 1. Download and run project file
