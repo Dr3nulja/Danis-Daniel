@@ -8,7 +8,7 @@ How to install and run project //
 1. Download and run project file
 2. Also, you need to download libraries, with whom the project was made
 
-How to install libraries:
+How to install libraries //
 
 1. Open visual studio code
 2. Create new project, or open some project
