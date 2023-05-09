@@ -6,6 +6,10 @@
 #graphic design for project
 #Danis Nizamov JPTV22
 
+#02.05.2023
+#graphic design for project
+#Danis Nizamov JPTV22
+
 import tkinter as tk
 window = tk.Tk()
 window.geometry("1280x960")
@@ -55,18 +59,13 @@ button = tk.Button(text="Add Word to Listbox", command=myClick, font=("Arial", 1
 button.pack(anchor="n")
 
 
-button = tk.Button(text="Save", font=("Arial", 15))
-button.place(x="25", y="15")
-button.pack(anchor="se")
-
-
 def myQuit():
     window.destroy()
     window.quit()
 
 
 button = tk.Button(text="Quit", font=("Arial", 15), command=myQuit)
-button.place(x="25", y="35")
+button.place(x="25", y="25")
 button.pack(anchor="se")
 
 input()
