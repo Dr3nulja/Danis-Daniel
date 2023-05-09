@@ -1,10 +1,13 @@
 Project is done by:
+
 Danis Nizamov, Daniel Stikkel
 
 Project name:
+
 Word maker game Estonian version
 
 Project Desctiption:
+
 none, will be update
 
 How to install and run project:
