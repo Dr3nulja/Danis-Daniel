@@ -1,5 +1,9 @@
 #02.05.2023
 #graphic design for project
+#Danis Nizamov, Daniel Stikkel JPTV22
+
+#02.05.2023
+#graphic design for project
 #Danis Nizamov JPTV22
 
 import tkinter as tk
