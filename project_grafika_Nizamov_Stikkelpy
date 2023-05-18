@@ -1,25 +1,17 @@
-#02.05.2023
-#graphic design for project
-#Danis Nizamov, Daniel Stikkel JPTV22
-
-#02.05.2023
-#graphic design for project
-#Danis Nizamov JPTV22
-
-"""размер окна с игрой"""
 import tkinter as tk
+import random
 window = tk.Tk()
 window.geometry("1280x960") 
 window.title("Word maker game")
 
-"""заголовок, его тощина, высота, резмер шрифта""" 
-label = tk.Label(text="Word maker game", width=15, height=5, font=("Arial", 17)) 
+
+label = tk.Label(text="Word maker game", width=15, height=5, font=("Arial", 17))
+label.pack()
 
 
 label = tk.Label(text="_"*1000)
 label.pack()
 
-"""сторона в которой будет распологаться""" 
 
 label = tk.Label(text="Letters: ", font=("Arial", 15))
 label.pack(anchor="w") 
@@ -27,16 +19,20 @@ label.pack(anchor="w")
 
 label = tk.Label(text="_"*1000)
 label.pack()
-"""строка ввода"""
-entry = tk.Entry(width=17, font=("Arial", 24))
 
-"""функция добавляющаяя слова в текст бокс"""
+
+entry = tk.Entry(width=17, font=("Arial", 24))
+entry.pack()
+
 def myClick():
     word = entry.get()
     listbox.insert(0, word) 
 
 
-"""параметры текст бокса"""
+button = tk.Button(text="Add Word to Listbox", command=myClick, font=("Arial", 12))
+button.pack(anchor="n") 
+
+
 listbox = tk.Listbox(height = 15,
                   width = 33,
                   bg = "grey",
@@ -51,17 +47,19 @@ listbox.config(yscrollcommand=scrollbar.set)
 scrollbar.config(command=listbox.yview)
 listbox.pack() 
 
-"""сама кнопка добавляющая слова в текст бокс"""
-button = tk.Button(text="Add Word to Listbox", command=myClick, font=("Arial", 12))
-button.pack(anchor="n") 
 
-"""Функция кнопки выхода"""
 def myQuit():
     window.destroy()
     window.quit() 
 
 
-"""кнопка выхода"""
+
+def check_estonian_word(word):
+    if estonian_language.is_estonian_word(word):
+        print("The word is in Estonian.")
+    else:
+        print("The word is not in Estonian.")
+
 button = tk.Button(text="Quit", font=("Arial", 15), command=myQuit)
 button.place(x="25", y="25")
 button.pack(anchor="se")
