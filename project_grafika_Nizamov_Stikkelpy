@@ -1,7 +1,45 @@
-import tkinter as tk
+#02.05.2023
+#graphic design for project
+#Danis Nizamov JPTV22
+
 import random
+import tkinter as tk
+
+
+class EstonianDictionary:
+    def __init__(self):
+        self.dictionary = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'r', 's', 'š', 'z', 'ž', 't', 'u', 'v', 'õ', 'ä', 'ö', 'ü']
+
+class EstonianLanguage:
+    def __init__(self):
+        self.estonian_dictionary = EstonianDictionary()
+
+    def generate_random_letter(self):
+        return random.choice(self.estonian_dictionary.dictionary)
+
+    def is_estonian_word(self, word):
+        for letter in word:
+            if letter not in self.estonian_dictionary.dictionary:
+                return False
+        return True
+
+def generate_random_letter():
+    estonian_language = EstonianLanguage()
+    print(estonian_language.estonian_dictionary.dictionary)
+    random_letter = estonian_language.generate_random_letter()
+    letters_label.configure(text="Random Estonian letter: " + random_letter)
+
+# def check_estonian_word():
+#     word = entry.get()
+#     if estonian_language.is_estonian_word(word):
+#         result_label.configure(text="The word is in Estonian.")
+#     else:
+#         result_label.configure(text="The word is not in Estonian.")
+
+estonian_language = EstonianLanguage()
+
 window = tk.Tk()
-window.geometry("1280x960") 
+window.geometry("1280x960")
 window.title("Word maker game")
 
 
@@ -13,24 +51,20 @@ label = tk.Label(text="_"*1000)
 label.pack()
 
 
-label = tk.Label(text="Letters: ", font=("Arial", 15))
-label.pack(anchor="w") 
+letters_label = tk.Label(text="Letters: ", font=("Arial", 15))
+letters_label.pack(anchor="w")
 
 
 label = tk.Label(text="_"*1000)
 label.pack()
 
-
 entry = tk.Entry(width=17, font=("Arial", 24))
-entry.pack()
+entry.pack(padx=6, pady=6)
+
 
 def myClick():
     word = entry.get()
-    listbox.insert(0, word) 
-
-
-button = tk.Button(text="Add Word to Listbox", command=myClick, font=("Arial", 12))
-button.pack(anchor="n") 
+    listbox.insert(0, word)
 
 
 listbox = tk.Listbox(height = 15,
@@ -38,7 +72,7 @@ listbox = tk.Listbox(height = 15,
                   bg = "grey",
                   activestyle = 'dotbox',
                   font = "Arial",
-                  fg = "white") 
+                  fg = "white")
 scrollbar = tk.Scrollbar()
 scrollbar.pack(side = "right", fill= "both")
 for values in range(0):
@@ -48,19 +82,28 @@ scrollbar.config(command=listbox.yview)
 listbox.pack() 
 
 
+button = tk.Button(text="Add Word to Listbox", command=myClick, font=("Arial", 12))
+button.pack(anchor="n")
+
+
+button = tk.Button(text="Save", font=("Arial", 15))
+button.place(x="25", y="5")
+button.pack(anchor="se")
+
+
 def myQuit():
     window.destroy()
-    window.quit() 
+    window.quit()
 
-
-
-def check_estonian_word(word):
-    if estonian_language.is_estonian_word(word):
-        print("The word is in Estonian.")
-    else:
-        print("The word is not in Estonian.")
 
 button = tk.Button(text="Quit", font=("Arial", 15), command=myQuit)
-button.place(x="25", y="25")
+button.place(x="25", y="35")
 button.pack(anchor="se")
+
+
+
+rndm_letter_button = tk.Button(text="Generate random letter", font=("Arial", 15), command=generate_random_letter)
+rndm_letter_button.pack()
+
+
 input()
