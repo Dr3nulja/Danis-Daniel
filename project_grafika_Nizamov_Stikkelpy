@@ -1,5 +1,4 @@
 #02.05.2023
-#graphic design for project
 #Danis Nizamov JPTV22
 
 import random
@@ -7,7 +6,10 @@ import tkinter as tk
 
 
 class EstonianDictionary:
-    def __init__(self):
+    """
+    Класс представляет словарь эстонского языка
+    """
+    def __init__(self):    
         self.dictionary = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'r', 's', 'š', 'z', 'ž', 't', 'u', 'v', 'õ', 'ä', 'ö', 'ü']
 
 class EstonianLanguage:
@@ -15,26 +17,20 @@ class EstonianLanguage:
         self.estonian_dictionary = EstonianDictionary()
 
     def generate_random_letter(self):
+        """
+        Генерирует случайную эстонскую букву
+        """
         return random.choice(self.estonian_dictionary.dictionary)
 
-    def is_estonian_word(self, word):
-        for letter in word:
-            if letter not in self.estonian_dictionary.dictionary:
-                return False
-        return True
 
 def generate_random_letter():
+    """
+    Генерирует 10 случайных эстонских букв через запятую
+    """
     estonian_language = EstonianLanguage()
-    print(estonian_language.estonian_dictionary.dictionary)
-    random_letter = estonian_language.generate_random_letter()
-    letters_label.configure(text="Random Estonian letter: " + random_letter)
+    random_letters = [estonian_language.generate_random_letter() for _ in range(10)]
+    letters_label.configure(text="Random Estonian letters: " + ", ".join(random_letters))
 
-# def check_estonian_word():
-#     word = entry.get()
-#     if estonian_language.is_estonian_word(word):
-#         result_label.configure(text="The word is in Estonian.")
-#     else:
-#         result_label.configure(text="The word is not in Estonian.")
 
 estonian_language = EstonianLanguage()
 
@@ -86,12 +82,10 @@ button = tk.Button(text="Add Word to Listbox", command=myClick, font=("Arial", 1
 button.pack(anchor="n")
 
 
-button = tk.Button(text="Save", font=("Arial", 15))
-button.place(x="25", y="5")
-button.pack(anchor="se")
-
-
 def myQuit():
+    """
+    Функция которая закрывает приложение
+    """
     window.destroy()
     window.quit()
 
