@@ -19,7 +19,8 @@ How to install libraries:
 1. Open visual studio code
 2. Create new project, or open some project
 3. In the terminal write: pip install tkinter
-4. Use your library
+4. pip install random
+5. Use your library
 
 How to use project: 
 1. Open python file and run it
@@ -28,4 +29,4 @@ How to use project:
 Word Programm preview: ![wordmakergame](https://user-images.githubusercontent.com/131642172/233935102-5848e57a-b812-46b8-8bac-b8547aa5e9da.png)
 
 
-Programm preview: ![image](https://user-images.githubusercontent.com/131642172/236808697-bab81834-d976-43e2-9819-e66caa38fa2c.png)
+Programm preview: ![image](https://github.com/Dr3nulja/Danis-Daniel/assets/131642172/08d0e867-8137-438a-b1c3-ef69d324552d)
