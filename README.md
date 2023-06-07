@@ -11,8 +11,10 @@ Estonian words through a simple game. The "Word Maker Game" project has a simple
 The game itself is the input of the correct word from the letters displayed on the screen.
 
 How to install and run project:
-1. Download and run project file
-2. Also, you need to download libraries, with whom the project was made
+1. Download RAR file
+2. Extract from his folder
+3. Download missing libraries 
+4. Run file 
 
 How to install libraries:
 
