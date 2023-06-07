@@ -31,4 +31,4 @@ How to use project:
 Word Programm preview: ![wordmakergame](https://user-images.githubusercontent.com/131642172/233935102-5848e57a-b812-46b8-8bac-b8547aa5e9da.png)
 
 
-Programm preview: ![image](https://github.com/Dr3nulja/Danis-Daniel/assets/131642172/08d0e867-8137-438a-b1c3-ef69d324552d)
+Programm preview: ![image](https://github.com/Dr3nulja/Danis-Daniel/assets/131642172/f52a3c15-eb55-4e74-8065-347ffc6e25b5)
